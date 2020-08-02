@@ -26,11 +26,8 @@
     "extends": [
       "zce"
     ],
-    "packageRules": [
-      {
-        "paths": ["+(package.json)"],
-        "dependencyDashboardApproval": true
-      }
+    "ignorePaths": [
+      "template"
     ]
   },
   "standard": {
