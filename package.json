@@ -25,6 +25,12 @@
   "renovate": {
     "extends": [
       "zce"
+    ],
+    "packageRules": [
+      {
+        "paths": ["+(package.json)"],
+        "dependencyDashboardApproval": true
+      }
     ]
   },
   "standard": {
