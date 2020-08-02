@@ -7,7 +7,6 @@ const path = require('path')
 const chalk = require('chalk')
 const pkg = require('./package.json')
 
-const isTest = process.env.NODE_ENV === 'test'
 const date = new Date()
 
 /** @type {import('caz').Template} */
@@ -100,7 +99,7 @@ module.exports = {
     if (ctx.config.install === false) {
       console.log(chalk`  $ {cyan npm install} {gray # or yarn}`)
     }
-    console.log(chalk`  $ {cyan ${ctx.config.install ? ctx.config.install : 'npm'} test}`)
+    console.log(chalk`  $ {cyan ${ctx.config.install ? ctx.config.install : 'npm'} run serve}`)
     console.log('\nHappy hacking :)\n')
   }
 }
