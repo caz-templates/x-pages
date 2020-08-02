@@ -1,60 +1,62 @@
 // @ts-check
 
-// // !!! Sharing the dependencies of caz
-// module.paths = module.parent.paths
+// !!! Sharing the dependencies of caz
+module.paths = module.parent.paths
 
-// const path = require('path')
-// const chalk = require('chalk')
+const path = require('path')
+const chalk = require('chalk')
 const pkg = require('./package.json')
+
+const isTest = process.env.NODE_ENV === 'test'
+const date = new Date()
 
 /** @type {import('caz').Template} */
 module.exports = {
   name: pkg.name,
   version: pkg.version,
   metadata: {
-    // TODO: predefined template metadata
-    // year: new Date().getFullYear()
+    year: date.getFullYear(),
+    month: ('0' + (date.getMonth() + 1)).substr(-2),
+    day: ('0' + date.getDate()).substr(-2)
   },
   prompts: [
-    // TODO: custom template prompts
-    // {
-    //   name: 'name',
-    //   type: 'text',
-    //   message: 'Project name'
-    // },
-    // {
-    //   name: 'version',
-    //   type: 'text',
-    //   message: 'Project version'
-    // },
-    // {
-    //   name: 'description',
-    //   type: 'text',
-    //   message: 'Project description',
-    //   /** @param {any} _ @param {{ name: string }} values */
-    //   initial: (_, values) => `A template for creating ${values.name} apps.`
-    // },
-    // {
-    //   name: 'author',
-    //   type: 'text',
-    //   message: 'Project author name'
-    // },
-    // {
-    //   name: 'email',
-    //   type: 'text',
-    //   message: 'Project author email'
-    // },
-    // {
-    //   name: 'url',
-    //   type: 'text',
-    //   message: 'Project author url'
-    // },
-    // {
-    //   name: 'github',
-    //   type: 'text',
-    //   message: 'GitHub username or organization',
-    //   initial: 'caz-templates'
-    // },
+    {
+      name: 'name',
+      type: 'text',
+      message: 'Project name'
+    },
+    {
+      name: 'version',
+      type: 'text',
+      message: 'Project version'
+    },
+    {
+      name: 'description',
+      type: 'text',
+      message: 'Project description',
+      initial: 'Awesome x-pages apps.'
+    },
+    {
+      name: 'author',
+      type: 'text',
+      message: 'Project author name'
+    },
+    {
+      name: 'email',
+      type: 'text',
+      message: 'Project author email'
+    },
+    {
+      name: 'url',
+      type: 'text',
+      message: 'Project author url'
+    },
+    {
+      name: 'github',
+      type: 'text',
+      message: 'GitHub username or organization',
+      initial: 'caz-templates'
+    },
     // {
     //   name: 'features',
     //   type: 'multiselect',
@@ -65,36 +67,40 @@ module.exports = {
     //     { title: 'Feature2', value: 'feature2', selected: true }
     //   ]
     // },
-    // {
-    //   name: 'install',
-    //   type: 'confirm',
-    //   message: 'Install dependencies',
-    //   initial: true
-    // },
-    // {
-    //   name: 'pm',
-    //   type: prev => process.env.NODE_ENV === 'test' || prev ? 'select' : null,
-    //   message: 'Package manager',
-    //   hint: ' ',
-    //   choices: [
-    //     { title: 'npm', value: 'npm' },
-    //     { title: 'yarn', value: 'yarn' },
-    //     { title: 'pnpm', value: 'pnpm' }
-    //   ]
-    // }
+    {
+      name: 'install',
+      type: 'confirm',
+      message: 'Install dependencies',
+      initial: true
+    },
+    {
+      name: 'pm',
+      type: prev => process.env.NODE_ENV === 'test' || prev ? 'select' : null,
+      message: 'Package manager',
+      hint: ' ',
+      choices: [
+        { title: 'npm', value: 'npm' },
+        { title: 'yarn', value: 'yarn' },
+        { title: 'pnpm', value: 'pnpm' }
+      ]
+    }
   ],
+  install: 'npm',
+  init: true,
+  prepare: async ctx => {
+    ctx.config.install = ctx.answers.install && ctx.answers.pm
+  },
   complete: async ctx => {
-    // TODO: custom complete callback
-    // console.clear()
-    // console.log(chalk`Created a new project in {cyan ${ctx.project}} by the {blue ${ctx.template}} template.\n`)
-    // console.log('Getting Started:')
-    // if (ctx.dest !== process.cwd()) {
-    //   console.log(chalk`  $ {cyan cd ${path.relative(process.cwd(), ctx.dest)}}`)
-    // }
-    // if (ctx.config.install === false) {
-    //   console.log(chalk`  $ {cyan npm install} {gray # or yarn}`)
-    // }
-    // console.log(chalk`  $ {cyan ${ctx.config.install ? ctx.config.install : 'npm'} test}`)
-    // console.log('\nHappy hacking :)\n')
+    console.clear()
+    console.log(chalk`Created a new project in {cyan ${ctx.project}} by the {blue ${ctx.template}} template.\n`)
+    console.log('Getting Started:')
+    if (ctx.dest !== process.cwd()) {
+      console.log(chalk`  $ {cyan cd ${path.relative(process.cwd(), ctx.dest)}}`)
+    }
+    if (ctx.config.install === false) {
+      console.log(chalk`  $ {cyan npm install} {gray # or yarn}`)
+    }
+    console.log(chalk`  $ {cyan ${ctx.config.install ? ctx.config.install : 'npm'} test}`)
+    console.log('\nHappy hacking :)\n')
   }
 }
