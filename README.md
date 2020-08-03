@@ -5,14 +5,14 @@
 [![devDependency Status][devdependency-img]][devdependency-url]
 [![Code Style][style-img]][style-url]
 
-> A template for creating x-pages apps.
+> A template for creating [x-pages](https://github.com/zce/x-pages) apps.
 
 ## Usage
 
 Prerequisites: [Node.js](https://nodejs.org) (>= 10.17, 12.10 preferred), [npm](https://www.npmjs.com) (>= 6.x) or [yarn](https://yarnpkg.com) (>= 1.20) and [Git](https://git-scm.com).
 
 ```shell
-# create x-pagess through this
+# create x-pages apps through this
 $ npx caz x-pages my-x-pages
 
 # enter generated directory
@@ -22,13 +22,13 @@ $ cd my-x-pages
 $ npm test # or `yarn test`
 ```
 
-or
+Or use globally installed CAZ:
 
 ```shell
 # Install the `caz` globally
 $ npm install caz --global # or `yarn global add caz`
 
-# create x-pagess through this
+# create x-pages apps through this
 $ caz x-pages my-x-pages
 
 # enter generated directory
@@ -55,8 +55,8 @@ $ npm test # or `yarn test`
 
 
 
-[travis-img]: https://img.shields.io/travis/caz-templates/x-pages
-[travis-url]: https://travis-ci.org/caz-templates/x-pages
+[travis-img]: https://img.shields.io/travis/com/caz-templates/x-pages
+[travis-url]: https://travis-ci.com/caz-templates/x-pages
 [dependency-img]: https://img.shields.io/david/caz-templates/x-pages
 [dependency-url]: https://david-dm.org/caz-templates/x-pages
 [devdependency-img]: https://img.shields.io/david/dev/caz-templates/x-pages
