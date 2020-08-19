@@ -9,20 +9,9 @@
     "pages",
     "zce"
   ],
-  "homepage": "https://github.com/<%= github %>/<%= name %>#readme",
-  "bugs": {
-    "url": "https://github.com/<%= github %>/<%= name %>/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/<%= github %>/<%= name %>.git"
-  },
+  "repository": "<%= github %>/<%= name %>",
   "license": "MIT",
-  "author": {
-    "name": "<%= author %>",
-    "email": "<%= email %>",
-    "url": "<%= url %>"
-  },
+  "author": "<%= author %> <<%= email %>> (<%= url %>)",
   "scripts": {
     "clean": "x-pages clean",
     "lint": "x-pages lint",
