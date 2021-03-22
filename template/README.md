@@ -112,6 +112,10 @@ Clean the `dist` & `temp` files.
 
 - [zce/x-pages](https://github.com/zce/x-pages) - A fully managed gulp workflow for static page sites.
 
+## Related
+
+- [zce/caz](https://github.com/zce/caz) - A simple yet powerful template-based Scaffolding tools.
+
 ## Contributing
 
 1. **Fork** it on GitHub!
