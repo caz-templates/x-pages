@@ -39,13 +39,13 @@
     ]
   },
   "dependencies": {
-    "bootstrap": "5.0.2",
+    "bootstrap": "5.1.0",
     "jquery": "3.6.0",
     "popper.js": "1.16.1",
     "x-pages": "1.0.0"
   },
   "devDependencies": {
-    "caz": "0.7.0",
+    "caz": "0.8.0",
     "jest": "27.0.6",
     "standard": "16.0.3"
   }
