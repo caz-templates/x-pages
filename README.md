@@ -60,7 +60,7 @@ $ npm test # or `yarn test`
 
 [travis-img]: https://img.shields.io/travis/com/caz-templates/x-pages
 [travis-url]: https://travis-ci.com/caz-templates/x-pages
-[dependency-img]: https://img.shields.io/librariesio/release/github/caz-templates/x-pages
+[dependency-img]: https://img.shields.io/librariesio/github/caz-templates/x-pages
 [dependency-url]: https://github.com/caz-templates/x-pages
 [style-img]: https://img.shields.io/badge/code_style-standard-brightgreen
 [style-url]: https://standardjs.com
