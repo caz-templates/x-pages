@@ -2,14 +2,13 @@
 
 [![Build Status][travis-img]][travis-url]
 [![Dependency Status][dependency-img]][dependency-url]
-[![devDependency Status][devdependency-img]][devdependency-url]
 [![Code Style][style-img]][style-url]
 
 > A template for creating [x-pages](https://github.com/zce/x-pages) apps.
 
 ## Usage
 
-Prerequisites: [Node.js](https://nodejs.org) (>= 12.10 required, >= 14.17 preferred), [npm](https://www.npmjs.com) (>= 6.x) or [yarn](https://yarnpkg.com) (>= 1.22) and [Git](https://git-scm.com).
+Prerequisites: [Node.js](https://nodejs.org) (>= 14.14 required, >= 16.13 preferred), [npm](https://www.npmjs.com) (>= 7.x) or [yarn](https://yarnpkg.com) (>= 1.22) and [Git](https://git-scm.com).
 
 ```shell
 # create x-pages apps by this template
@@ -61,9 +60,7 @@ $ npm test # or `yarn test`
 
 [travis-img]: https://img.shields.io/travis/com/caz-templates/x-pages
 [travis-url]: https://travis-ci.com/caz-templates/x-pages
-[dependency-img]: https://img.shields.io/david/caz-templates/x-pages
-[dependency-url]: https://david-dm.org/caz-templates/x-pages
-[devdependency-img]: https://img.shields.io/david/dev/caz-templates/x-pages
-[devdependency-url]: https://david-dm.org/caz-templates/x-pages?type=dev
+[dependency-img]: https://img.shields.io/librariesio/release/github/caz-templates/x-pages
+[dependency-url]: https://github.com/caz-templates/x-pages
 [style-img]: https://img.shields.io/badge/code_style-standard-brightgreen
 [style-url]: https://standardjs.com

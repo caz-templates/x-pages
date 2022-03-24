@@ -52,16 +52,6 @@ module.exports = {
       message: 'GitHub username or organization',
       initial: 'caz-templates'
     },
-    // {
-    //   name: 'features',
-    //   type: 'multiselect',
-    //   message: 'Choose the features you need',
-    //   instructions: false,
-    //   choices: [
-    //     { title: 'Feature1', value: 'feature1' },
-    //     { title: 'Feature2', value: 'feature2', selected: true }
-    //   ]
-    // },
     {
       name: 'install',
       type: 'confirm',
@@ -75,8 +65,8 @@ module.exports = {
       hint: ' ',
       choices: [
         { title: 'npm', value: 'npm' },
-        { title: 'yarn', value: 'yarn' },
-        { title: 'pnpm', value: 'pnpm' }
+        { title: 'pnpm', value: 'pnpm' },
+        { title: 'yarn', value: 'yarn' }
       ]
     }
   ],
@@ -93,7 +83,7 @@ module.exports = {
       console.log(`  $ cd ${path.relative(process.cwd(), ctx.dest)}`)
     }
     if (ctx.config.install === false) {
-      console.log(`  $ npm install # or yarn`)
+      console.log('  $ npm install')
     }
     console.log(`  ${ctx.config.install ? ctx.config.install : 'npm'} run serve`)
     console.log('\nHappy hacking :)\n')

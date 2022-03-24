@@ -4,7 +4,6 @@
 [![Package Version][version-img]][version-url]
 [![License][license-img]][license-url]
 [![Dependency Status][dependency-img]][dependency-url]
-[![devDependency Status][devdependency-img]][devdependency-url]
 [![Code Style][style-img]][style-url]
 
 > <%= description %>
@@ -139,9 +138,7 @@ Clean the `dist` & `temp` files.
 [version-url]: https://github.com/<%= github %>/<%= name %>
 [license-img]: https://img.shields.io/github/license/<%= github %>/<%= name %>
 [license-url]: https://github.com/<%= github %>/<%= name %>/blob/master/LICENSE
-[dependency-img]: https://img.shields.io/david/<%= github %>/<%= name %>
-[dependency-url]: https://david-dm.org/<%= github %>/<%= name %>
-[devdependency-img]: https://img.shields.io/david/dev/<%= github %>/<%= name %>
-[devdependency-url]: https://david-dm.org/<%= github %>/<%= name %>?type=dev
+[dependency-img]: https://img.shields.io/librariesio/release/github/<%= github %>/<%= name %>
+[dependency-url]: https://github.com/<%= github %>/<%= name %>
 [style-img]: https://img.shields.io/badge/code_style-standard-brightgreen
 [style-url]: http://standardjs.com
